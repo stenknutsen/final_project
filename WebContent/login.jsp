@@ -13,13 +13,13 @@
     
     ResultSet rs, rs2;
     
-    //see if person logging is an admin
+    //first see if person logging as an admin account
     rs2 = st.executeQuery("SELECT * FROM account NATURAL JOIN admin_account WHERE username='" + userid + "' and password='" + pwd + "' AND account.username = admin_account.admin_id");
     if (rs2.next()) {
         session.setAttribute("userid", userid);
         response.sendRedirect("success_admin.jsp");
     } 
-    else 
+    else //see if just a normal account
     {
     	rs = st.executeQuery("select * from account where username='" + userid + "' and password='" + pwd + "'");
         
