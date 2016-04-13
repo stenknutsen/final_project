@@ -8,5 +8,6 @@
 </head>
 <body>
 You're on the Administrator page now.
+<a href='admin_account_update.jsp'>Change Account Information Here.</a>
 </body>
 </html>
