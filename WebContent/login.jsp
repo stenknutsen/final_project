@@ -11,14 +11,28 @@
   //VM MySQL pwd: ThereDKLD82
     Statement st = con.createStatement();
     
-    ResultSet rs;
-    rs = st.executeQuery("select * from account where username='" + userid + "' and password='" + pwd + "'");
-    if (rs.next()) {
+    ResultSet rs, rs2;
+    
+    //see if person logging is an admin
+    rs2 = st.executeQuery("SELECT * FROM account NATURAL JOIN admin_account WHERE username='" + userid + "' and password='" + pwd + "' AND account.username = admin_account.admin_id");
+    if (rs2.next()) {
         session.setAttribute("userid", userid);
-        response.sendRedirect("success.jsp");
+        response.sendRedirect("success_admin.jsp");
     } 
     else 
     {
-        out.println("Invalid entry: <a href='index.jsp'>please try again</a>");
+    	rs = st.executeQuery("select * from account where username='" + userid + "' and password='" + pwd + "'");
+        
+        
+        if (rs.next()) {
+            session.setAttribute("userid", userid);
+            response.sendRedirect("success.jsp");
+        } 
+        else 
+        {
+            out.println("Invalid entry: <a href='index.jsp'>please try again</a>");
+        }
     }
+    
+    
 %>
