@@ -6,6 +6,6 @@
 <title>Welcome Page</title>
 </head>
 <body>
-Sorry: Registration Unsuccessful! Username already exits. Try Again Here: <a href="reg.jsp">Register</a>
+Sorry: Registration Unsuccessful! Username already exists. Try Again Here: <a href="reg.jsp">Register</a>
 </body>
 </html>
