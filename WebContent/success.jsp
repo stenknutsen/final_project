@@ -12,7 +12,8 @@ You are not logged in. <a href="index.jsp">Please Login Here</a>
 %>
 
 Welcome <%=session.getAttribute("userid")%> ! <a href='logout.jsp'>Logout Here</a>
-
+<br>
+<a href='memberpage.jsp'>Go to Your Member Home Page Here</a>
 <%
   }
 %>
