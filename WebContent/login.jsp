@@ -8,7 +8,7 @@
     String pwd = request.getParameter("pass");
     Class.forName("com.mysql.jdbc.Driver").newInstance();
     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/proj2016",
-            "root", "pottedmeat");
+            "root", "ThereDKLD82");
   //VM MySQL pwd: ThereDKLD82
     Statement st = con.createStatement();
     
