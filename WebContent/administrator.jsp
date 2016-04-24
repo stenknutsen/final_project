@@ -9,7 +9,8 @@
 </head>
 <body>
 You're on the Administrator page now.<br>
-<a href='admin_account_update.jsp'>Change Account Information Here.</a><br>
-<a href='disp_csr_accts.jsp'>View Account Information Here.</a><br>
+<a href='admin_account_update.jsp'>Change Administrator Account Information Here.</a><br>
+<a href='disp_csr_accts.jsp'>View Customer Service Account Information Here.</a><br>
+<a href='create_csr.jsp'>Create Customer Service Account Information Here.</a><br>
 </body>
 </html>

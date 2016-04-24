@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%--Code Contributors: Sten Knutsen --%>
 <%@ page import="java.sql.*" %>
 
 <% Class.forName("com.mysql.jdbc.Driver"); %>
@@ -41,5 +42,6 @@
             </tr>
             <% } %>
         </table>
+        <a href='administrator.jsp'>Go Back to Administrator Page</a>
     </body>
 </html>
