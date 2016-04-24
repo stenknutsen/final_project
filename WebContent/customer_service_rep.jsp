@@ -12,5 +12,6 @@
 <a href='csr_account_update.jsp'>Change Your CSR Account Information Here.</a><br>
 <a href='disp_member_accts.jsp'>View Member Account Information Here.</a><br>
 <a href='csr_send_message.jsp'>Send Message Here.</a><br>
+<a href='csr_sent_message.jsp'>View Messages Sent Here.</a><br>
 </body>
 </html>
