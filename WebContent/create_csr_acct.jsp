@@ -24,6 +24,7 @@
     {
     
     int i = st.executeUpdate("insert into account(username, password, first_name, last_name, email, regdate) values ('" + user + "','" + pwd + "','" + fname + "','" + lname + "','" + email + "', CURDATE())");
+    st.executeUpdate("insert into csr_account(csr_id) values ('"+user+"')");
     if (i > 0) {
         
         response.sendRedirect("csr_creation_success.jsp");

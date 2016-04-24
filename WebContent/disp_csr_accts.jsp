@@ -19,7 +19,7 @@
 
             Statement st = con.createStatement();
             ResultSet resultset = 
-                st.executeQuery("SELECT * FROM account") ; 
+                st.executeQuery("SELECT * FROM account NATURAL JOIN csr_account where account.username = csr_account.csr_id") ; 
         %>
 
         <table BORDER="1">
