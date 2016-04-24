@@ -22,7 +22,7 @@
                   </tr>
                   <tr>
                       <td>Message:</td>
-                      <td><input type="text" name="Text1"  value=""/></td>
+                      <td><textarea name="Text1" cols="40" rows="5"></textarea></td>
                   </tr>
                   <tr>
                       <td><input type="submit" value="Send" /></td>
