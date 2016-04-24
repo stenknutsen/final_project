@@ -5,14 +5,14 @@
 <html>
 <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Admin Account Update Page</title>
+        <title>CSR Account Update Page</title>
 </head>
 <body>
-<form method="post" action="admin_update.jsp">
+<form method="post" action="csr_update.jsp">
 <table border="1" width="30%" cellpadding="5">
               <thead>
                   <tr>
-                  <th colspan="2">Update Admin Information Here</th>
+                  <th colspan="2">Update CSR Information Here</th>
                   </tr>
                 </thead>
                 <tbody>
