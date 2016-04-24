@@ -12,17 +12,21 @@
   //VM MySQL pwd: ThereDKLD82
     Statement st = con.createStatement();
     
-    ResultSet rs, rs2;
+    ResultSet rs, rs2, rs3;
     
     //first see if person logging as an admin account
     rs2 = st.executeQuery("SELECT * FROM account NATURAL JOIN admin_account WHERE username='" + userid + "' and password='" + pwd + "' AND account.username = admin_account.admin_id");
     if (rs2.next()) {
         session.setAttribute("userid", userid);
         response.sendRedirect("success_admin.jsp");
-    } 
-    else //see if just a normal account
+    }else{
+    rs3 = st.executeQuery("SELECT * FROM account NATURAL JOIN csr_account WHERE username='" + userid + "' and password='" + pwd + "' AND account.username = csr_account.csr_id");
+    if (rs3.next()){
+    session.setAttribute("userid", userid);
+    response.sendRedirect("success_csr.jsp");
+    }else //see if just a normal account
     {
-    	rs = st.executeQuery("select * from account where username='" + userid + "' and password='" + pwd + "'");
+        rs = st.executeQuery("select * from account where username='" + userid + "' and password='" + pwd + "'");
         
         
         if (rs.next()) {
@@ -33,7 +37,11 @@
         {
             out.println("Invalid entry: <a href='index.jsp'>please try again</a>");
         }
-    }
+    }//end normal account else
+
+
+    }//end csr else
+    
     
     
 %>
