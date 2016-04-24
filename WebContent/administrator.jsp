@@ -8,7 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-You're on the Administrator page now.
-<a href='admin_account_update.jsp'>Change Account Information Here.</a>
+You're on the Administrator page now.<br>
+<a href='admin_account_update.jsp'>Change Account Information Here.</a><br>
+<a href='disp_csr_accts.jsp'>View Account Information Here.</a><br>
 </body>
 </html>
