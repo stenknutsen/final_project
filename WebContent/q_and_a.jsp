@@ -39,5 +39,6 @@
               </tbody>
           </table>
 </form>
+<a href='success.jsp'>Return to previous page</a><br>
 </body>
 </html>

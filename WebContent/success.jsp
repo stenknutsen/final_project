@@ -13,8 +13,9 @@ You are not logged in. <a href="index.jsp">Please Login Here</a>
 
 Welcome <%=session.getAttribute("userid")%> ! <a href='logout.jsp'>Logout Here</a>
 <br>
-<a href='memberpage.jsp'>Go to Your Member Home Page Here</a><br>
-<a href='q_and_a.jsp'>Go to Question and Answer Page Here</a><br>
+<a href='memberpage.jsp'>Go to Your Member Home Page Here</a><br><br>
+<a href='q_and_a.jsp'>Send Question to CSR Here</a><br>
+<a href='view_q_and_a.jsp'>View Questions and Answers to CSR Here</a><br>
 <%
   }
 %>
