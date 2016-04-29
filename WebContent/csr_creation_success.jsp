@@ -7,6 +7,6 @@
 <title>CSR Success</title>
 </head>
 <body>
-CSR Creation Successful! <a href='administrator.jsp'>Go back to Administrator Main Page</a>
+CSR Creation/Deletion Successful! <a href='administrator.jsp'>Go back to Administrator Main Page</a>
 </body>
 </html>

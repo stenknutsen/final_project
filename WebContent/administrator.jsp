@@ -9,9 +9,11 @@
 </head>
 <body>
 <h1>Administrator Home Page</h1>
-<a href='admin_account_update.jsp'>Change Administrator Account Information Here.</a><br>
+<a href='admin_account_update.jsp'>Change Administrator Account Information Here.</a><br><br>
 <a href='disp_csr_accts.jsp'>View Customer Service Account Information Here.</a><br>
 <a href='create_csr.jsp'>Create Customer Service Account Information Here.</a><br>
+<a href='destroy_csr.jsp'>Destroy Customer Service Account Here.</a><br><br>
+<h2>Messages</h2>
 <a href='admin_send_message.jsp'>Send A Message Here.</a><br>
 <a href='admin_sent_message.jsp'>View Sent Messages Here.</a><br>
 <a href='admin_inbox_message.jsp'>View Messages Inbox Here.</a><br>
