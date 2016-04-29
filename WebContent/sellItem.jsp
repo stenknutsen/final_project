@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%--Code Contributors: Ben Homa --%>
 <%@ page import="java.sql.*"%>
 <%
 	String item = request.getParameter("Game");
@@ -8,7 +9,7 @@
 	String sellprice = request.getParameter("Sell Price");
 	String console = request.getParameter("Xbox");
 
-	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/proj2016", "root", "root");
+	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/proj2016", "root", "ThereDKLD82");
 	//VM MySQL pwd: ThereDKLD82
 	Statement st = con.createStatement();
 
