@@ -19,5 +19,6 @@
 <h2>Question and Answer</h2>
 <a href='csr_q_and_a.jsp'>View Unanswered Questions Here.</a><br><br>
 <a href='csr_delete_auction.jsp'>Delete Auctions Here</a><br>
+<a href='csr_delete_bids.jsp'>Delete Bids Here</a><br>
 </body>
 </html>

@@ -7,6 +7,6 @@
 <title>Update Success Page</title>
 </head>
 <body>
-Auction Deleted!  <a href='customer_service_rep.jsp'>Back to CSR page.</a>
+Deleted!  <a href='customer_service_rep.jsp'>Back to CSR page.</a>
 </body>
 </html>
