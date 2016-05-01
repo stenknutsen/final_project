@@ -17,5 +17,7 @@
 <a href='admin_send_message.jsp'>Send A Message Here.</a><br>
 <a href='admin_sent_message.jsp'>View Sent Messages Here.</a><br>
 <a href='admin_inbox_message.jsp'>View Messages Inbox Here.</a><br>
+<h2>Sales Report</h2>
+<a href='sales_report_total.jsp'>Total Earnings</a><br>
 </body>
 </html>
