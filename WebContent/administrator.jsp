@@ -19,5 +19,6 @@
 <a href='admin_inbox_message.jsp'>View Messages Inbox Here.</a><br>
 <h2>Sales Report</h2>
 <a href='sales_report_total.jsp'>Total Earnings</a><br>
+<a href='earnings_by_title.jsp'>Total Earnings by Title</a><br>
 </body>
 </html>
