@@ -12,9 +12,12 @@
 <a href='csr_account_update.jsp'>Change Your CSR Account Information Here.</a><br><br>
 <a href='disp_member_accts.jsp'>View Member Account Information Here.</a><br>
 <a href='reset_member_password.jsp'>Reset Member Password Here.</a><br><br>
+<h2>Messages</h2>
 <a href='csr_send_message.jsp'>Send A Message Here.</a><br>
 <a href='csr_sent_message.jsp'>View Sent Messages Here.</a><br>
 <a href='csr_inbox_message.jsp'>View Messages Inbox Here.</a><br><br>
-<a href='csr_q_and_a.jsp'>View Unanswered Questions Here.</a><br>
+<h2>Question and Answer</h2>
+<a href='csr_q_and_a.jsp'>View Unanswered Questions Here.</a><br><br>
+<a href='csr_delete_auction.jsp'>Delete Auctions Here</a><br>
 </body>
 </html>
