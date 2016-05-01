@@ -21,6 +21,6 @@
 <a href='sales_report_total.jsp'>Total Earnings</a><br>
 <a href='earnings_by_title.jsp'>Total Earnings by Title</a><br>
 <a href='earnings_by_seller.jsp'>Total Earnings by Seller</a><br>
-
+<a href='best_selling_items.jsp'>Best Selling Items</a><br>
 </body>
 </html>
