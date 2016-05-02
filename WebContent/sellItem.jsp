@@ -1,47 +1,43 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%--Code Contributors: Ben Homa --%>
+	<%--Code Contributors: Ben Homa --%>
 <%@ page import="java.sql.*"%>
 <%
-	String item = request.getParameter("Game");
+
+	String upc = request.getParameter("UPC");
+	String title = request.getParameter("Game");
 	String genre = request.getParameter("Genre");
+	String rating = request.getParameter("Rating");
 	String bidprice = request.getParameter("Bid Price");
 	String sellprice = request.getParameter("Sell Price");
-	String console = request.getParameter("Xbox");
+	String system = request.getParameter("Xbox");
+	String item = request.getParameter("item");
+	String condition = request.getParameter("Condition");
 
-	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/proj2016", "root", "ThereDKLD82");
+	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/proj2016", "root", "root");
 	//VM MySQL pwd: ThereDKLD82
 	Statement st = con.createStatement();
 
 	ResultSet rs;
-	rs = st.executeQuery("select game from Game where game='" + item + "'");
+	rs = st.executeQuery("select game from Game where game='" + title + "'");
 
 	if(!bidprice.equals("") && !sellprice.equals("")) {
 		int i = st.executeUpdate(
-				"insert into Game(game, genre, bid_price, sell_price, regdate) values ('"
-						+ item + "','" + genre + "','" + bidprice + "','" + sellprice + "','" + console);
-		if (i > 0) {
+				"insert into Game(upc_code, title, system, rating, genre) values ('"
+						+ upc + "','" + title + "','" + system + "','" + rating + "','" + genre);
+		int x = st.executeUpdate("insert into Item(item_id, min_price, max_price, item_condition, upc_code) values ('"
+				+ item + "','" + bidprice + "','" + sellprice + "','" + condition + "','" + upc);
 
-			response.sendRedirect("member_page.jsp");
+		if (i > 0 && x > 0) {
 
-		} else {
-			response.sendRedirect("sellItem.jsp");
-		}
-	}
-	else if(sellprice.equals("")) {
-		int i = st.executeUpdate(
-				"insert into Game(game, genre, bid_price, regdate) values ('"
-						+ item + "','" + genre + "','" + bidprice + "','" + "','" + console);
-		if (i > 0) {
-
-			response.sendRedirect("member_page.jsp");
+			response.sendRedirect("postSellSucess.jsp");
 
 		} else {
-			response.sendRedirect("sellItem.jsp");
+			response.sendRedirect("postSellFail.jsp");
 		}
 	}
-	else {
-		response.sendRedirect("sellItem.jsp");
+		else {
+		response.sendRedirect("postSellFail.jsp");
 	}
 
 
