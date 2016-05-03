@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%--Code Contributors: Ben Homa --%>
+    <!-- Ben Homa -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,7 +8,7 @@
 <title>Update Page</title>
 </head>
 <body>
-<form method="post" action="member_update.jsp">
+<form method="post" action="MemberUpdate.jsp">
 <table border="1" width="30%" cellpadding="5">
               <thead>
                   <tr>
@@ -37,9 +37,6 @@
                       <td><input type="submit" value="Submit" /></td>
                       <td><input type="reset" value="Reset" /></td>
                     </tr>
-                 <!--   <tr>
-                      <td colspan="2">Already registered: <a href="index.jsp">Login Here</a></td>
-                  </tr> -->
               </tbody>
           </table>
 </form>
