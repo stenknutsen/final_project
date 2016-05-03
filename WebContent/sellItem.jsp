@@ -6,18 +6,22 @@
 
 		String username = (String)session.getAttribute("userid");
 		String upc = request.getParameter("UPC");
-		String title = request.getParameter("Game");
-		String genre = request.getParameter("Genre");
-		String rating = request.getParameter("Rating");
 		String bidprice = request.getParameter("Bid Price");
 		String sellprice = request.getParameter("Selling");
-		String system = request.getParameter("Xbox");
 		String condition = request.getParameter("Condition");
-		String time = request.getParameter("Date");
+		String year = request.getParameter("Year");
+		String month = request.getParameter("Month");
+		String day = request.getParameter("Day");
+		String hour = request.getParameter("Hour");
+		String minute = request.getParameter("Minute");
+
 		String member_id = "hello";
 
 		Integer bid = Integer.parseInt(bidprice);
-		Integer timeint = Integer.parseInt(time);
+
+
+		String test = year+month+day+" "+hour+minute;
+
 		Integer item = 12, aid = 0, sold = 0;
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/proj2016", "root", "ThereDKLD82");
 		Statement st = con.createStatement();
@@ -48,9 +52,9 @@
 
 			int x = st.executeUpdate("insert into item(item_id, min_price, item_condition, upc_code) values('" + item + "','" + bid + "','" + condition + "','" + upc + "')");
 
-			System.out.println(sellprice);
-			int y = st.executeUpdate("insert into auction(auction_id, hours_open, auto_sale_price, current_highest_bid, item_id, seller_id) values ('" + aid + "','" + timeint + "','" + sellprice + "','" + bid + "','" + item + "','" + member_id + "')");
-
+			System.out.println(test);
+			int y = st.executeUpdate("insert into auction(auction_id, auto_sale_price, current_highest_bid, item_id, seller_id) values ('" + aid + "','" + sellprice + "','" + bid + "','" + item + "','" + member_id + "')");
+			int z = st.executeUpdate("Update auction SET hours_open = STR_TO_DATE('" + test +"', '%Y%m%d %k%i') where auction_id ='"+ aid + "'");
 			if (i > 0 && x > 0 && y > 0) {
 
 				response.sendRedirect("postSellWin.jsp");
