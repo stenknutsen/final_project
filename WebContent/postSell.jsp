@@ -12,23 +12,18 @@
 
 	<form method="post" action="sellItem.jsp">
 		<div class="container">
-			<input type="text" name="UPC" /> Enter UPC <br />
-			<input type="text" name="Game" /> Enter Game <br />
-			<input type="text" name="Rating" /> Enter Rating <br />
-			<input type="text" name="Genre" /> Enter Genre <br />
+			<input type="text" name="UPC" /> Enter UPC of Game <br />
 			<input type="text" name="Bid Price" /> Enter Bidding Price To Start<br />
-			<input type="text" name="Selling Price" /> Enter Selling Price <br />
-			<h2>Please Check For Console</h2>
-			<input type="radio" name="Xbox" /> Xbox <br />
-			<input type="radio" name="Xbox" /> Playstation <br />
-			<input type="radio" name="Xbox" /> PC <br />
-			<input type="radio" name="Xbox" /> Wii <br />
+			<input type="text" name="Selling" /> Enter Selling Price <br />
 			<h2>Please Check For Condition</h2>
-			<input type="radio" name="Condtion" /> New <br />
-			<input type="radio" name="Condtion" /> Refurbished <br />
-			<input type="radio" name="Condtion" /> Used <br />
-
-			<input type="text"  name="Date" /> Put Amount of Hours To Keep Open <br />
+			<input type="radio" name="Condition" value="New" /> New <br />
+			<input type="radio" name="Condition" value="Refurbished"/> Refurbished <br />
+			<input type="radio" name="Condition" value="Used"/> Used <br />
+			<input type="text"  name="Year" />Year In Number Format<br />
+			<input type="text"  name="Month" />Month In Number Format (09 is September)<br />
+			<input type="text"  name="Day" />Day In Number Format (05 is fifth of the month)<br />
+			<input type="text"  name="Hour" />Hour In Number Format<br />
+			<input type="text"  name="Minute" />Minute In Number Format<br />
 			<div>
 			<input type="submit" value="Submit" name="Sell" />
 			<input type="reset" value="Clear" />
