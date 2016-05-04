@@ -20,20 +20,20 @@
             Statement st = con.createStatement();
             String src = (String)session.getAttribute("userid");
             ResultSet resultset = 
-                st.executeQuery("SELECT * FROM demo_auctions") ; 
+                st.executeQuery("SELECT * FROM auction") ; 
         %>
 
         <table BORDER="1">
             <tr>
                 <th>Auction ID</th>
-                <th>Seller</th>
+                <th>Seller ID</th>
                 
                 
             </tr>
             <% while(resultset.next()){ %>
             <tr>
             	<td> <%= resultset.getString(1) %></td>
-                <td> <%= resultset.getString(2) %></td>
+                <td> <%= resultset.getString(7) %></td>
                
                 
             </tr>

@@ -5,7 +5,7 @@
 <% 
 			String qid=request.getParameter("q_id");
 			String msg = request.getParameter("Text1");
-			String update_request = "DELETE FROM demo_auctions WHERE auction_id="+qid+"";
+			String update_request = "DELETE FROM auction WHERE auction_id="+qid+"";
 			Connection con2 = DriverManager.getConnection("jdbc:mysql://localhost:3306/proj2016",
 		            "root", "ThereDKLD82");
 			Statement st2 = con2.createStatement();
