@@ -15,10 +15,18 @@
 			<input type="text" name="UPC" /> Enter UPC of Game <br />
 			<input type="text" name="Bid Price" /> Enter Bidding Price To Start<br />
 			<input type="text" name="Selling" /> Enter Selling Price <br />
+			<input type="text" name="Title" /> Title <br />
+			<input type="text" name="Genre" /> Genre<br />
+			<input type="text" name="Rating" /> Rating <br />
 			<h2>Please Check For Condition</h2>
 			<input type="radio" name="Condition" value="New" /> New <br />
 			<input type="radio" name="Condition" value="Refurbished"/> Refurbished <br />
 			<input type="radio" name="Condition" value="Used"/> Used <br />
+
+			<input type="radio" name="Xbox" value="Xbox" /> New <br />
+			<input type="radio" name="Xbox" value="Playstation"/> Refurbished <br />
+			<input type="radio" name="Xbox" value="Wii"/> Used <br />
+
 			<input type="text"  name="Year" />Year In Number Format<br />
 			<input type="text"  name="Month" />Month In Number Format (09 is September)<br />
 			<input type="text"  name="Day" />Day In Number Format (05 is fifth of the month)<br />
