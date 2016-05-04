@@ -15,7 +15,17 @@
 </head>
 <body>
 	<h1>Found Results</h1>
-
+	<form action="search_buy_bid.jsp">
+	<br>
+	<input type ="submit" name ="Buy Now" value="Buy Now"/>
+	<input type="text" name="auction_id_1" value="Enter Auction ID"/>
+	<input type="submit" name ="Place Bid" value="Place Bid"/>
+	<input type="text" name="auction_id_2" value="Enter Auction ID"/>
+	<input type="text" name="bid_price" value="Enter Bid Price"/>
+	<br>
+	<input type="radio" name="autobid" value="Yes"/> Auto Bid 
+	<input type="text" name="autobid_limit" value="Enter Max Auto Bid"/>
+	<br>
 	<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
 		url="jdbc:mysql://localhost/proj2016?autoReconnect=true&useSSL=false"
 		user="root" password="ThereDKLD82" />
@@ -40,11 +50,9 @@
 				<td><c:out value="${row.rating}" /></td>
 				<td><c:out value="${row.genre}" /></td>
 				<td><c:out value="${row.current_highest_bid}" /></td>
-				<td><c:out value="${row.auto_sale_price}" /></td>
-				<td><c:out value="Buy Now"></c:out>
 			</tr>
 		</c:forEach>
 	</table>
-
+	</form>
 </body>
 </html>

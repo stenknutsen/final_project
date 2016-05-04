@@ -11,6 +11,7 @@
 	String max_p = request.getParameter("max_price");
 	String system = request.getParameter("system");
 	String condition = request.getParameter("condition");
+	
 	int rating = 0;
 	double min_price = 0;
 	double max_price = 0; 
