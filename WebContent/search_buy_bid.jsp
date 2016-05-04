@@ -67,7 +67,6 @@
 			}
 
 			rs = st.executeQuery("SELECT auction.current_highest_bid FROM auction WHERE auction.auction_id = '"+auction_id+"'");
-
 			while (rs.next()) {
 				previous_highest_bid = rs.getDouble(1);
 			}
@@ -109,9 +108,14 @@
 					current_highest_bidder = rs.getString("username");
 				}
 				
+				System.out.println(current_highest_bidder);
+				
+				int l = st.executeUpdate("UPDATE auction SET auction.bidder_id = '" + current_highest_bidder
+						+ "' WHERE auction.auction_id = '" + auction_id + "'");
+				
 				if(current_highest_bidder.compareTo(previous_highest_bidder) != 0) {
 					String msg = "Dear " + previous_highest_bidder + ", We are notifying you that you have been outbid for item auction id number " + auction_id;
-					int l = st.executeUpdate("INSERT INTO messages(message_id,src,dest,msg_text) VALUES(NULL,'System','"+previous_highest_bidder+"','"+msg+"')");
+					int m = st.executeUpdate("INSERT INTO messages(message_id,src,dest,msg_text) VALUES(NULL,'System','"+previous_highest_bidder+"','"+msg+"')");
 				}
 				
 				response.sendRedirect("bid_page.jsp");

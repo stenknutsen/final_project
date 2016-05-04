@@ -8,10 +8,14 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib uri="http://displaytag.sf.net" prefix="display"%>
+
 
 <html>
 <head>
 <title>Search Results</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<h1>Found Results</h1>
@@ -33,28 +37,24 @@
 
 	<sql:query dataSource="${snapshot}" var="result"> SELECT * FROM game, item, auction WHERE game.title = '<%=session.getAttribute("game")%>' AND game.rating = '<%=session.getAttribute("rating")%>' AND game.genre = '<%=session.getAttribute("genre")%>' AND item.item_condition = '<%=session.getAttribute("condition")%>' AND game.system = '<%=session.getAttribute("system")%>' AND game.upc_code = item.upc_code AND item.item_id = auction.item_id; </sql:query>
 
-	<table border="1" width="100%">
-		<tr>
-			<th>upc_code</th>
-			<th>Title</th>
-			<th>System</th>
-			<th>Rating</th>
-			<th>Genre</th>
-			<th>Bid Price</th>
-			<th>Buy Now Price</th>
-		</tr>
-		<c:forEach var="row" items="${result.rows}">
-			<tr>
-				<td><c:out value="${row.upc_code}" /></td>
-				<td><c:out value="${row.title}" /></td>
-				<td><c:out value="${row.system}" /></td>
-				<td><c:out value="${row.rating}" /></td>
-				<td><c:out value="${row.genre}" /></td>
-				<td><c:out value="${row.current_highest_bid}" /></td>
-				<td><c:out value="${row.auto_sale_price}" /></td>
-			</tr>
-		</c:forEach>
-	</table>
+	<display:table uid="${auction_id}" name="${result.rows}" pagesize="5"
+			cellpadding="0px" cellspacing="0px">
+			<display:setProperty name="basic.show.header" value="true"/>
+			<display:column property="auction_id" sortable="true"
+				headerClass="sortable" />
+			<display:column property="title" sortable="true"
+				headerClass="sortable" />
+			<display:column property="system" sortable="true"
+				headerClass="sortable" />
+			<display:column property="genre" sortable="true"
+				headerClass="sortable" />
+			<display:column property="rating" sortable="true"
+				headerClass="sortable" />
+			<display:column property="current_highest_bid" sortable="true"
+				headerClass="sortable" />
+			<display:column property="auto_sale_price" sortable="true"
+				headerClass="sortable" />
+		</display:table>
 	</form>
 </body>
 </html>
