@@ -124,6 +124,7 @@
 		String error_page = "search_buy_bid_error.jsp";
 		String auction_id_string = request.getParameter("auction_id_1");
 		int auction_id = 0;
+		int item_id = 0;
 		String username = (String) session.getAttribute("userid");
 
 		if (auction_id_string.compareTo("Enter Auction ID") == 0) {
@@ -139,10 +140,16 @@
 
 			Statement st = con.createStatement();
 			ResultSet rs;
+			
+			rs = st.executeQuery(
+					"SELECT auction.item_id FROM auction, item WHERE auction.auction_id = '"+auction_id+"' AND auction.item_id = item.item_id");
+
+			while (rs.next()) {
+				item_id = rs.getInt(1);
+			}
 
 			int i = st.executeUpdate(
-					"DELETE FROM item WHERE auction.item_id = item.item _id AND auction.auction_id = '"
-							+ auction_id + "'");
+					"DELETE FROM item WHERE item.item_id = '"+item_id+"'");
 			int j = st.executeUpdate("DELETE FROM auction WHERE auction.auction_id = '" + auction_id + "'");
 
 			response.sendRedirect("buy_now_page.jsp");
