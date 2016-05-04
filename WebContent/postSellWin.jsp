@@ -9,6 +9,6 @@
 <body>
 <h1>Options</h1>
  <a href="postSell.jsp">Post New Item</a>
- <a href="member_page.jsp">Back To Your Home Page</a>
+ <a href="memberpage.jsp">Back To Your Home Page</a>
 </body>
 </html>
