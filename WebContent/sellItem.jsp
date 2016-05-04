@@ -53,17 +53,16 @@
 	    	member_id = m_id.getString("member_account.member_id");
 	    }
 
-			int i = st.executeUpdate("update game set units_sold = units_sold +1 where upc_code='"+upc+"'");
 			int k = st.executeUpdate("insert into game(upc_code, title, system, rating, genre, units_sold) values('" + upc + "','" + title + "','" + system + "','" + rating + "','" + genre + "','" + '0' + "')");
 			int x = st.executeUpdate("insert into item(item_id, min_price, item_condition, upc_code) values('" + item + "','" + bid + "','" + condition + "','" + upc + "')");
 
-			int y = st.executeUpdate("insert into auction(auction_id, auto_sale_price, current_highest_bid, item_id, seller_id) values ('" + aid + "','" + sellprice + "','" + bid + "','" + item + "','" + member_id + "')");
+			int y = st.executeUpdate("insert into auction(auction_id, auto_sale_price, current_highest_bid, item_id, seller_id) values ('" + aid + "','" + sellprice + "','" + bid + "','" + item + "','" + username + "')");
 			int z = st.executeUpdate("Update auction SET hours_open = STR_TO_DATE('" + test +"', '%Y%m%d %k%i') where auction_id ='"+ aid + "'");
-			if (i > 0 && x > 0 && y > 0) {
+			if (k > 0 && x > 0 && y > 0) {
 
 				response.sendRedirect("postSellWin.jsp");
 
 			} else {
-				response.sendRedirect("PostSellFail.jsp");
+				response.sendRedirect("postSellFail.jsp");
 			}
 	%>
