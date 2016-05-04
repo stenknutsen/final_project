@@ -1,0 +1,51 @@
+table {
+	border: 1px solid #666;
+	width: 80%;
+	margin: 20px 0 20px 0 !important;
+}
+th,td {
+	padding: 2px 4px 2px 4px !important;
+	text-align: left;
+	vertical-align: top;
+}
+thead tr {
+	background-color: #999999;
+}
+th.sorted {
+	background-color: #CCCCCC;
+}
+th a,th a:visited {
+	color: black;
+}
+th a:hover {
+	text-decoration: underline;
+	color: black;
+}
+th.sorted a,th.sortable a {
+	background-position: right;
+	display: block;
+	width: 100%;
+}
+tr.odd {
+	background-color: #fff
+}
+
+tr.tableRowEven,tr.even {
+	background-color: #CCCCCC
+}
+.group-1 {
+    font-weight:bold;
+    padding-bottom:10px;
+    border-top:1px solid black;
+}
+.group-2 {
+    font-style:italic;
+    border-top: 1px solid black;
+
+}
+.grouped-table tr.even {
+    background-color: #fff;
+}
+.grouped-table tr.odd {
+    background-color: #fff;
+}
