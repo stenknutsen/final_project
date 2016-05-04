@@ -10,7 +10,7 @@
 <body>
 <h1>Game Succesfully Posted</h1>
 
- <a href="member_page.jsp">Back To Member Page</a>
+ <a href="memberpage.jsp">Back To Member Page</a>
  <a href="postSell.jsp">Sell New Item</a>
 </body>
 </html>
