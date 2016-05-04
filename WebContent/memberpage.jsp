@@ -13,10 +13,15 @@
 
 <div>
 <form method="post" action="member.jsp">
-	<a href="Update_Account.jsp"><button type="button">Update Account</button></a>
+	<a href="UpdateMember.jsp"><button type="button">Update Account</button></a>
 	<a href="postSell.jsp"><button type ="button">Sell Item</button></a>
 	<a href="buy_page.jsp"><button type ="button">Buy Item</button></a>
 	<a href="search_page.jsp"><button type ="button">Search Item </button></a>
+	<a href="member_items_selling.jsp"><button type="button">Check On Items Selling</button></a>
+	<a href="member_bids.jsp"><button type="button">Check On Bids</button></a>
+	<a href="member_update_details.jsp"><button type="button">Add Credit Card</button></a>
+	<a href="member_similiar.jsp"><button type="button">Search for similiar items</button></a>
+
  </form>
 </div>
 
