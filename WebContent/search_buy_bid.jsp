@@ -107,9 +107,7 @@
 				while (rs.next()) {
 					current_highest_bidder = rs.getString("username");
 				}
-				
-				System.out.println(current_highest_bidder);
-				
+								
 				int l = st.executeUpdate("UPDATE auction SET auction.bidder_id = '" + current_highest_bidder
 						+ "' WHERE auction.auction_id = '" + auction_id + "'");
 				
